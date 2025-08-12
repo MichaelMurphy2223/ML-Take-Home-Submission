@@ -1,0 +1,6 @@
+pandas 
+selenium 
+selenium-wire 
+openai 
+webdriver-manager 
+apify-client
