@@ -26,10 +26,10 @@ class SpeakerRecommender:
     def weighted_encoding(self, row):
         # Create a weighted one-hot encoding for a list of categories
         cat_indices = [self.categories.index(i) for i in row]
-        embedding = np.zeros(len(self.categories), dtype=np.float32)
+        encoding = np.zeros(len(self.categories), dtype=np.float32)
         for i, j in enumerate(cat_indices):
-            embedding[j] = 5 - i  # Higher weight for higher-ranked categories
-        return embedding
+            encoding[j] = 5 - i  # Higher weight for higher-ranked categories
+        return encoding
 
     def build_embeddings(self):        
         # Build and normalize expertise embeddings for all speakers
